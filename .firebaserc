@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "budget-manager-9e45f": {
+      "hosting": {
+        "budget-manager": [
+          "budget-manager-9e45f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "budget-manager-9e45f"
+  }
+}

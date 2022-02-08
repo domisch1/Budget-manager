@@ -1,0 +1,15 @@
+<div echarts [options]="options" [merge]="updateOptions" class="mb-4"></div>
+<div class="flex flex-col justify-center items-center w-full font-display">
+  <h2 class="text-xl text-center">This is your Budget</h2>
+  <span class="text-lg text-green-700 my-2"> {{ budget + "€" }} </span>
+  <hr />
+  <h2 class="text-xl mb-2 text-center">
+    This is the money you have after your spendings.
+  </h2>
+  <span
+    [class]="budgetAfterSpendings >= 0 ? 'text-green-700' : 'text-red-700'"
+    class="text-lg my-2"
+  >
+    {{ budgetAfterSpendings + "€" }}
+  </span>
+</div>

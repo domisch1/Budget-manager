@@ -1,0 +1,87 @@
+<section
+  class="flex flex-row items-center justify-between h-20 p-10 sm:p-0 sm:px-20 w-screen drop-shadow-lg bg-white z-10"
+>
+  <span class="text-lg font-semibold sm:mt-0">BUDGETxMANAGER</span>
+  <div
+    class="flex sm:hidden cursor-pointer flex-col w-10 z-50"
+    (click)="onToggle()"
+  >
+    <span class="block rounded bg-black h-1 w-full"></span>
+    <span class="block rounded bg-black h-1 w-full my-1"></span>
+    <span class="block rounded bg-black h-1 w-full"></span>
+  </div>
+
+  <nav class="hidden mt-96 text-lg sm:block sm:float-right sm:mt-0">
+    <ul class="flex flex-col sm:flex-row">
+      <li class="sm:mr-8 mb-4 sm:mb-0 text-center">
+        <a
+          routerLink="/dashboard"
+          class="transition-all duration-200"
+          routerLinkActive="text-blue-800"
+          >Dashboard</a
+        >
+      </li>
+      <li class="sm:mr-8 mb-4 sm:mb-0 text-center">
+        <a
+          routerLink="/signup"
+          class="transition-all duration-200"
+          routerLinkActive="text-blue-800"
+          >Sign up</a
+        >
+      </li>
+      <li class="text-center">
+        <a
+          routerLink="/login"
+          class="transition-all duration-200"
+          routerLinkActive="text-blue-800"
+          >Login</a
+        >
+      </li>
+    </ul>
+  </nav>
+</section>
+<div
+  class="block sm:hidden fixed top-0 right-0 bg-white w-2/3 h-screen drop-shadow-lg z-50 transition-all duration-200"
+  [ngClass]="toggler ? 'translate-x-0' : 'translate-x-full'"
+>
+  <div class="flex justify-end items-center w-full h-20 p-10">
+    <div
+      class="flex sm:hidden cursor-pointer flex-col w-10"
+      (click)="onToggle()"
+    >
+      <span class="block rounded bg-black h-1 w-full"></span>
+      <span class="block rounded bg-black h-1 w-full my-1"></span>
+      <span class="block rounded bg-black h-1 w-full"></span>
+    </div>
+  </div>
+  <div class="flex justify-end items-center p-10">
+    <nav class="text-lg mt-40">
+      <ul class="flex flex-col sm:flex-row">
+        <li class="sm:mr-8 mb-4 sm:mb-0 text-center">
+          <a
+            routerLink="/dashboard"
+            class="transition-all duration-200"
+            routerLinkActive="text-blue-800"
+            >Dashboard</a
+          >
+        </li>
+        <li class="sm:mr-8 mb-4 sm:mb-0 text-right">
+          <a
+            routerLink="/signup"
+            class="transition-all duration-200"
+            routerLinkActive="text-blue-800"
+            >Sign up</a
+          >
+        </li>
+        <li class="text-right">
+          <a
+            routerLink="/login"
+            class="transition-all duration-200"
+            routerLinkActive="text-blue-800"
+            >Login</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
